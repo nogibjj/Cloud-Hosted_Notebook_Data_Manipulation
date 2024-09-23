@@ -22,8 +22,7 @@ def load_df(filepath):
 
 
 # Generate statistics
-def generate_statistics(df, analysis_col):
-    # Calculating statistics
+def gen_stat(df, analysis_col):
     mean = calculate_mean(df, analysis_col)
     median = calculate_median(df, analysis_col)
     std_dev = calculate_std_dev(df, analysis_col)
@@ -36,8 +35,8 @@ def generate_statistics(df, analysis_col):
     return stats_df
 
 
-# generating the plots
-def generate_plots(
+# generating graphs
+def gen_graphs(
     df,
     x_col,
     y_col,
@@ -47,12 +46,10 @@ def generate_plots(
     x2_col,
     y2_col,
     graph2_title,
-    jupyter_render,
+    jupyter_render=False,
 ):
-    # Plotting
-    grouped_data = df.groupby(x_col).size().reset_index(name=y_col)
     build_graph(
-        grouped_data,
+        df,
         x_col,
         y_col,
         plot_title,
@@ -62,14 +59,14 @@ def generate_plots(
         jupyter_render=jupyter_render,
     )
     # Distribution of material types
-    build_graph2(df, x2_col, y2_col, graph2_title, jupyter_render)
+    build_graph2(df, x2_col, y2_col, graph2_title, jupyter_render=jupyter_render)
 
 
 def save_to_md():
     # Write the markdown table to a file
-    describe_df = generate_statistics(df, analysis_col)
+    describe_df = gen_stat(df, analysis_col)
     markdown_table = describe_df.to_markdown()
-    generate_plots(
+    gen_graphs(
         df,
         x_col,
         y_col,
@@ -104,9 +101,9 @@ graph2_title = "Social Media Customer Satisfaction Score"
 # Loading the data
 df = load_df(filepath)
 # Call generate_statistics
-generate_statistics(df, analysis_col)
-# Call generate_plots
-generate_plots(
+gen_stat(df, analysis_col)
+# Call generate graphs
+gen_graphs(
     df,
     x_col,
     y_col,
