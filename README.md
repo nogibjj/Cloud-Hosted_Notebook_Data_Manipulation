@@ -1,4 +1,7 @@
-
+[![Install](https://github.com/tursunait/Individual_Project_Tursunai_DE/actions/workflows/install.yml/badge.svg)](https://github.com/tursunait/Individual_Project_Tursunai_DE/actions/workflows/install.yml)
+[![Format](https://github.com/tursunait/Individual_Project_Tursunai_DE/actions/workflows/format.yml/badge.svg)](https://github.com/tursunait/Individual_Project_Tursunai_DE/actions/workflows/format.yml)
+[![Test](https://github.com/tursunait/Individual_Project_Tursunai_DE/actions/workflows/test.yml/badge.svg)](https://github.com/tursunait/Individual_Project_Tursunai_DE/actions/workflows/test.yml)
+[![Lint](https://github.com/tursunait/Individual_Project_Tursunai_DE/actions/workflows/lint.yml/badge.svg)](https://github.com/tursunait/Individual_Project_Tursunai_DE/actions/workflows/lint.yml)
 # IDS 706 Individual Project 1 - Tursunai Turumbekova
 
 ### 📂 Project Structure
