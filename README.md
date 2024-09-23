@@ -12,13 +12,12 @@
 │   └── devcontainer.json
 ├── .github
 │   └── workflows
-        └── cicd.yml
 │       ├── format.yml
 │       ├── install.yml
 │       ├── lint.yml
 │       └── test.yml
 ├── mylib
-│   ├── make_functions.py
+│   ├── lib.py
 │   └── test_lib.py
 ├── .gitignore
 ├── Makefile
@@ -34,7 +33,7 @@
 ```
 
 ### 📊 Dataset Description
-In this project, MTA NYCT Customer Engagement Statistics has been loaded. This dataset provided statistics and performance metrics about the volume and responsiveness in engaging with customers via several customer engagement channels. Data was provided for New York City Transit Subway and Bus customer engagement and customer service teams between May 2017 and May 2022. A python script with Polars is used to read the dataset, generate the summary statistics, and create the data visualization on seasonality of incoming calls showcased by each month, and social media stisfaction rate by year.
+In this project, MTA NYCT Customer Engagement Statistics has been loaded. This dataset provided statistics and performance metrics about the volume and responsiveness in engaging with customers via several customer engagement channels. Data was provided for New York City Transit Subway and Bus customer engagement and customer service teams between May 2017 and May 2022. A python script with Pandas is used to read the dataset, generate the summary statistics, and create the data visualization on seasonality of incoming calls showcased by each month, and social media stisfaction rate by year.
 
 ### 📋 Summary Statistics 
 
