@@ -19,12 +19,12 @@ container-lint:
 
 refactor: format lint
 
-generate_and_push:
-	python main.py
-	git config --local user.email "action@github.com"
-	git config --local user.name "GitHub Action"
-	git add bar.png bar2.png MTA.md
-	git commit -m "Generate stats and plots" || true
-	git push https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/tursunait/Individual_Project_Tursunai_DE.git
+#generate_and_push:
+# python main.py
+# git config --local user.email "action@github.com"
+#	git config --local user.name "GitHub Action"
+#	git add bar.png bar2.png MTA.md
+#	git commit -m "Generate stats and plots" || true
+#	git push https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/tursunait/Individual_Project_Tursunai_DE.git
 		
 all: install lint test format deploy
