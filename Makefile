@@ -3,7 +3,7 @@ install:
 		pip install -r requirements.txt
 
 test:
-	python -m pytest -vv --cov=main --cov=mylib test_*.py
+	pytest --nbval *.ipynb && python -m pytest -cov=mylib test_script.py mylib/test_lib.py
 
 format:	
 	black *.py 
@@ -20,6 +20,11 @@ container-lint:
 refactor: format lint
 
 deploy:
-	#deploy goes here
+	python main.py
+	git config --local user.email "action@github.com"
+	git config --local user.name "GitHub Action"
+	git add bar1.png bar2.png MTA.md
+	git commit -m "Generate stats and plots" || true 
+	git push
 		
 all: install lint test format deploy
