@@ -110,7 +110,6 @@ gen_graphs(
     plot_title,
     xlabel,
     ylabel,
-    df,
     x2_col,
     y2_col,
     graph2_title,
