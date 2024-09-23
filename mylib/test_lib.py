@@ -1,6 +1,6 @@
 import pytest
 import pandas as pd
-from lib import (
+from mylib.lib import (
     calculate_mean,
     calculate_median,
     calculate_std_dev,
