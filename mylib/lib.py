@@ -48,7 +48,7 @@ def build_graph(
     jupyter_render=False,
 ):
     plt.figure(figsize=(12, 8))
-    dataframe.plot(kind="bar", x=x_column, y=y_column, color=color, legend=False)
+    plt.bar(dataframe[x_column], dataframe[y_column], color=color)
     plt.title(title)
     plt.xlabel(xlabel)
     plt.ylabel(ylabel)
@@ -59,7 +59,6 @@ def build_graph(
         plt.show()
 
 
-# Build a plot on social media customer satisfaction by year
 def build_graph2(
     dataframe,
     x2_col,
@@ -69,7 +68,7 @@ def build_graph2(
     jupyter_render=False,
 ):
     plt.figure(figsize=(12, 8))
-    dataframe.plot(kind="bar", x=x2_col, y=y2_col, color=color, legend=False)
+    plt.bar(dataframe[x2_col], dataframe[y2_col], color=color)
     plt.title(graph2_title)
     plt.grid(axis="y")
     if not jupyter_render:
