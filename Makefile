@@ -23,7 +23,7 @@ generate_and_push:
 	python main.py
 	git config --local user.email "action@github.com"
 	git config --local user.name "GitHub Action"
-	git add bar1.png bar2.png MTA.md
+	git add bar.png bar2.png MTA.md
 	git commit -m "Generate stats and plots" || true 
 	git push
 		
